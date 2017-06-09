@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style>
+			.wrap span.on{
+				background-color: gold;
+				color: #660000;
+			}
+		</style>
+		<script src="angular.min.js"></script>
+	</head>
+	<body ng-app>
+		<div class="wrap" ng-init="now=0">
+			<p>
+				<span ng-click="now=0" class="{{now==0 ? 'on':'' }}">游戏</span>
+				<span ng-click="now=1" class="{{now==1 ? 'on':'' }}">电影</span>
+				<span ng-click="now=2" class="{{now==2 ? 'on':'' }}">动漫</span>
+			</p>
+			<div ng-show="now==0">守望先锋</div>
+			<div ng-show="now==1">速度与激情</div>
+			<div ng-show="now==2">海贼王</div>
+		</div>
+	</body>
+</html>
